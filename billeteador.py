@@ -1,103 +1,110 @@
-#perimetro
+#billeteador
 print('programa para calcular billetes')
+#variables
 cantidad=float(input('valor de a: '))
-decimales = cantidad *100 % 100
-entero=int(cantidad)
-a = entero // 500
-resto = entero % 500
-print('billetes de 500: ', a)
+decimales =int( cantidad *100 % 100)
+entero = int(cantidad)
+#condicion centimos
+if decimales>0:
+    print('tienes estos centimos', int (decimales))
+    x=str (input('quieres calcular la calderilla? S/N: '))
+if x!='S' and x!='s':
+    decimales=0
+
+ #calculo de enteros
+if entero>500:
+    a = entero // 500
+    resto = entero % 500
+    print('billetes de 500: ', a)
 if resto==0 and decimales==0:
     exit()
-else:
+
+if resto>=200:
     a = resto // 200
     resto = resto % 200
     print('billetes de 200: ',a)
-    if resto==0 and decimales==0:
+if resto==0 and decimales==0:
+    exit()
+
+if resto>=100:
+    a = resto // 100
+    resto = resto % 100
+    print('billetes de 100: ',a)
+if resto==0 and decimales==0 :
         exit()
-    else:
-        a = resto // 100
-        resto = resto % 100
-        print('billetes de 100: ',a)
-        if resto==0 and decimales==0 :
-            exit()
-        else:
-            a = resto // 50
-            resto = resto % 50
-            print('billetes de 50: ',a)
-            if resto==0 and decimales==0:
-                exit()
-            else:
-                a = resto // 20
-                resto = resto % 20
-                print('billetes de 20: ',a)
-                if resto==0 and decimales==0:
-                    exit()
-                else:
-                    a = resto // 10
-                    resto = resto % 10
-                    print('billetes de 10: ',a)
-                    if resto==0 and decimales==0:
-                        exit()
-                    else:
-                        a = resto // 5
-                        resto = resto % 5
-                        print('billetes de 5: ',a)
-                        if resto==0 and decimales==0:
-                            exit()
-                        else:
-                            a = resto // 2
-                            resto = resto % 2
-                            print('monedas de 2: ',a)
-                            if resto==0 and decimales==0:
-                                exit()
-                            else:
-                                a = resto // 1
-                                resto = resto % 1
-                                print('monedas de 1: ',a)
-                                if decimales==0:
-                                    exit()
-                                else:
-                                    print('quedan estos centimos', int (decimales))
-                                    x=str (input('quieres calcular la calderilla? S/N: '))
-                                    if x!='S' and x!='s':
-                                        print('gracias por participar')
-                                        exit()
-                                    else:
-                                        b = decimales // 50
-                                        resto = decimales % 50
-                                        print('monedas de 0.50: ', b)
-                                        if resto==0:
-                                            exit()
-                                        else:
-                                            b = resto // 20
-                                            resto = resto % 20
-                                            print('monedas de 0.20: ',b)
-                                            if resto==0:
-                                                exit()
-                                            else:
-                                                b = resto // 10
-                                                resto = resto % 10
-                                                print('monedas de 0.10: ',b)
-                                                if resto==0:
-                                                    exit()
-                                                else:
-                                                    b = resto // 5
-                                                    resto = resto % 5
-                                                    print('monedas de 0.05: ',b)
-                                                    if resto==0:
-                                                        exit()
-                                                    else:
-                                                        b = resto // 2
-                                                        resto = resto % 2
-                                                        print('monedas de 0.02: ',b)
-                                                        if resto==0:
-                                                            exit()
-                                                        else:
-                                                            b = resto // 1
-                                                            resto = resto % 1
-                                                            print('monedas de 0.01: ',b)
-                                                            if resto==0:
-                                                                exit()
+
+if resto>=50:
+    a = resto // 50
+    resto = resto % 50
+    print('billetes de 50: ',a)
+if resto==0 and decimales==0:
+    exit()
+if resto>=20:
+    a = resto // 20
+    resto = resto % 20
+    print('billetes de 20: ',a)
+if resto==0 and decimales==0:
+    exit()
+if resto>=10:
+    a = resto // 10
+    resto = resto % 10
+    print('billetes de 10: ',a)
+if resto==0 and decimales==0:
+    exit()
+if resto>=5:
+    a = resto // 5
+    resto = resto % 5
+    print('billetes de 5: ',a)
+if resto==0 and decimales==0:
+    exit()
+if resto>=2:
+    a = resto // 2
+    resto = resto % 2
+    print('monedas de 2: ',a)
+if resto==0 and decimales==0:
+    exit()
+if resto>=1:
+    a = resto // 1
+    resto = resto % 1
+    print('monedas de 1: ',a)
+if decimales==0:
+    exit()
+
+ #calculo de decimales
+if decimales>=50:
+    b = decimales // 50
+    resto = decimales % 50
+    print('monedas de 0.50: ', b)
+if resto==0:
+    exit()
+if resto>=20:
+    b = resto // 20
+    resto = resto % 20
+    print('monedas de 0.20: ',b)
+if resto==0:
+    exit()
+if resto>=10:
+    b = resto // 10
+    resto = resto % 10
+    print('monedas de 0.10: ',b)
+if resto==0:
+    exit()
+if resto>=5:
+    b = resto // 5
+    resto = resto % 5
+    print('monedas de 0.05: ',b)
+if resto==0:
+    exit()
+if resto>=2:
+    b = resto // 2
+    resto = resto % 2
+    print('monedas de 0.02: ',b)
+if resto==0:
+    exit()
+if resto>=1: 
+    b = resto // 1
+    resto = resto % 1
+    print('monedas de 0.01: ',b)
 
 
 
